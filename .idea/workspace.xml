@@ -2,295 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c34da85-0d77-470f-9f7c-281f67f58557" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/asaskevich/govalidator" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/bitly/go-simplejson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/boj/redistore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/boombuler/barcode" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/codegangsta/inject" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/fsnotify/fsnotify" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/go-martini/martini" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/go-redis/redis" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/gorilla/context" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/gorilla/securecookie" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/gorilla/sessions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/hashicorp/hcl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/heroku/docker-registry-client" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/imroc/req" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/jinzhu/gorm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/jinzhu/inflection" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/magiconair/properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/martini-contrib/render" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/martini-contrib/sessions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/mitchellh/mapstructure" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/oxtoacart/bpool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/pelletier/go-toml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/pquerna/otp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/renstrom/shortuuid" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/samuel/go-zookeeper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/satori/go.uuid" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/afero" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/cast" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/jwalterweatherman" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/pflag" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/viper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/golang.org/x/crypto" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/golang.org/x/net" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/golang.org/x/sys" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/golang.org/x/text" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gopkg.in/yaml.v2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/admin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/cqh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/java.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/muscle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/php.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/CDS.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/auth/basic.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/auth/basic_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/cli/cli.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/cli/cli_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/core/pool.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/errors/error.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/excel/excel.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/excel/excel_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/io/output.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/log/log.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/log/log_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/mail/mail.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/mail/mail_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/qrcode/qrcode.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/qrcode/qrcode_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/session/session.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/array.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/convert.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/convert_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/crypt.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/encoding.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/file.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/map.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/map_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/net.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/page_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/rich.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/rich_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/strings.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/strings_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/time.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/time_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/timer.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/timer_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/tool.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/tool_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/totp.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/totp_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/type.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/conf/init.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/build.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/codeJob.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/dashboard.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/deploy.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/sets.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/ssh.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/user.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/core/error.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/core/global.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-11-24.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-11-29.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-07.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-08.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-19.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-20.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-22.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-25.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-26.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-28.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-29.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-02.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-03.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-06.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-08.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-12.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-13.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-15.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-16.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-17.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-18.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-19.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/main.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/build.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/func.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/info.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/jobCmd.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/jobSrc.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/jobTask.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/log.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/ms.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/node.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/node_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/registry.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/registry_test.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/sets.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/setsMs.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/setsProxy.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/setsServer.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/user.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/404.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/500.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/auth.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/log.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/set.go" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/.jsbeautifyrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/css/sb-admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/css/sb-admin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/sb-admin-charts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/sb-admin-datatables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/sb-admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/code-job-command.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/code-job-detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/code-job-registry.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/code-job.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-build-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-build.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-deploy-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-deploy-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-deploy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-core.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-micro-service.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-nodes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-proxy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-users.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/blank.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/cards.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/charts.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/forgot-password.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/css/core.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/css/custom.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/footer.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/js/core.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/js/custom.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/modals/logout.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/navbar.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/scroll-to-top.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/index.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/login.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/navbar.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/register.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/tables.pug" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_cards.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_footer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_global.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_login.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_colors.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_fixed.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_global.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_static.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_toggle.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/sb-admin.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap-grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap-grid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap-reboot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap-reboot.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/js/bootstrap.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/js/bootstrap.bundle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/chart.js/Chart.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/chart.js/Chart.bundle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/chart.js/Chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/chart.js/Chart.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/datatables/dataTables.bootstrap4.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/datatables/dataTables.bootstrap4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/datatables/jquery.dataTables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/animated.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/screen-reader.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_animated.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_screen-reader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery-easing/jquery.easing.compatibility.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery-easing/jquery.easing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery-easing/jquery.easing.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/servers/registry-config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/sql/create.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/build/create.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/build/index.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/codeJob/command.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/codeJob/detail.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/codeJob/index.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/codeJob/registry.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/dashboard/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/deploy/create.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/deploy/detail-list.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/deploy/index.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/error/error403.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/error/error404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/error/error500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/layout/footer.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/layout/main.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/layout/nav.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/layout/page.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/core.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/microService.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/nodes.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/proxy.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/users.tmpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/user/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/user/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/user/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/asaskevich/govalidator" afterPath="$PROJECT_DIR$/src/github.com/asaskevich/govalidator" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/bitly/go-simplejson" afterPath="$PROJECT_DIR$/src/github.com/bitly/go-simplejson" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/boj/redistore" afterPath="$PROJECT_DIR$/src/github.com/boj/redistore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/boombuler/barcode" afterPath="$PROJECT_DIR$/src/github.com/boombuler/barcode" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/codegangsta/inject" afterPath="$PROJECT_DIR$/src/github.com/codegangsta/inject" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/fsnotify/fsnotify" afterPath="$PROJECT_DIR$/src/github.com/fsnotify/fsnotify" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/go-martini/martini" afterPath="$PROJECT_DIR$/src/github.com/go-martini/martini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/go-redis/redis" afterPath="$PROJECT_DIR$/src/github.com/go-redis/redis" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/gorilla/context" afterPath="$PROJECT_DIR$/src/github.com/gorilla/context" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/gorilla/securecookie" afterPath="$PROJECT_DIR$/src/github.com/gorilla/securecookie" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/gorilla/sessions" afterPath="$PROJECT_DIR$/src/github.com/gorilla/sessions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/hashicorp/hcl" afterPath="$PROJECT_DIR$/src/github.com/hashicorp/hcl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/imroc/req" afterPath="$PROJECT_DIR$/src/github.com/imroc/req" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/jinzhu/gorm" afterPath="$PROJECT_DIR$/src/github.com/jinzhu/gorm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/jinzhu/inflection" afterPath="$PROJECT_DIR$/src/github.com/jinzhu/inflection" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/magiconair/properties" afterPath="$PROJECT_DIR$/src/github.com/magiconair/properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/martini-contrib/render" afterPath="$PROJECT_DIR$/src/github.com/martini-contrib/render" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/martini-contrib/sessions" afterPath="$PROJECT_DIR$/src/github.com/martini-contrib/sessions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/mitchellh/mapstructure" afterPath="$PROJECT_DIR$/src/github.com/mitchellh/mapstructure" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/oxtoacart/bpool" afterPath="$PROJECT_DIR$/src/github.com/oxtoacart/bpool" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/pelletier/go-toml" afterPath="$PROJECT_DIR$/src/github.com/pelletier/go-toml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/pquerna/otp" afterPath="$PROJECT_DIR$/src/github.com/pquerna/otp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/renstrom/shortuuid" afterPath="$PROJECT_DIR$/src/github.com/renstrom/shortuuid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/samuel/go-zookeeper" afterPath="$PROJECT_DIR$/src/github.com/samuel/go-zookeeper" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/satori/go.uuid" afterPath="$PROJECT_DIR$/src/github.com/satori/go.uuid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/spf13/afero" afterPath="$PROJECT_DIR$/src/github.com/spf13/afero" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/spf13/cast" afterPath="$PROJECT_DIR$/src/github.com/spf13/cast" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/spf13/jwalterweatherman" afterPath="$PROJECT_DIR$/src/github.com/spf13/jwalterweatherman" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/spf13/pflag" afterPath="$PROJECT_DIR$/src/github.com/spf13/pflag" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/github.com/spf13/viper" afterPath="$PROJECT_DIR$/src/github.com/spf13/viper" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/golang.org/x/crypto" afterPath="$PROJECT_DIR$/src/golang.org/x/crypto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/golang.org/x/net" afterPath="$PROJECT_DIR$/src/golang.org/x/net" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/golang.org/x/sys" afterPath="$PROJECT_DIR$/src/golang.org/x/sys" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/golang.org/x/text" afterPath="$PROJECT_DIR$/src/golang.org/x/text" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gopkg.in/yaml.v2" afterPath="$PROJECT_DIR$/src/gopkg.in/yaml.v2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CDS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -309,8 +57,55 @@
   <component name="FavoritesManager">
     <favorites_list name="CDS" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="355">
+                <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sys/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="288">
+                <caret line="12" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="3" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -364,6 +159,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CDS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sys" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -490,18 +317,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517487411420</updated>
-      <workItem from="1517487413830" duration="358000" />
+      <workItem from="1517487413830" duration="437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358000" />
+    <option name="totallyTimeSpent" value="437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -525,5 +352,37 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/sys/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="288">
+            <caret line="12" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="355">
+            <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
