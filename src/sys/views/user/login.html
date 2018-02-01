@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FCDS-登录</title>
+    <!-- Bootstrap core CSS-->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin.css" rel="stylesheet">
+    <script src="/js/common.js"></script>
+    <script src="https://cdn.staticfile.org/blueimp-md5/2.7.0/js/md5.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+</head>
+
+<body class="bg-dark">
+<div class="container">
+    <div class="card card-login mx-auto mt-5">
+        <div class="card-header text-center h2">FCDS</div>
+        <div class="card-body">
+            <div>
+                <div class="form-group">
+                    <label for="inputUsername">用户名</label>
+                    <input class="form-control" id="inputUsername" type="text"
+                           aria-describedby="emailHelp"
+                           placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">密码</label>
+                    <input class="form-control" id="inputPassword" type="password"
+                           placeholder="请输入密码">
+                </div>
+                <div class="form-group">
+                    <label for="inputCode">动态码</label>
+                    <input class="form-control" id="inputCode" type="text" aria-describedby="emailHelp"
+                           placeholder="请输入动态码">
+                </div>
+                <input type="submit" class="btn btn-primary btn-block" value="登录" onclick="onLogin()"/>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        //enter键盘自动提交
+        $('.card-body').keyup(function (event) {
+            if (event.keyCode == 13) {
+                onLogin()
+            }
+        });
+    });
+
+    function onLogin() {
+        var username = $('#inputUsername').val();
+        var password = $('#inputPassword').val();
+        var code = $('#inputCode').val();
+        if (!username) {
+            displayError('用户名不能为空');
+            return;
+        }
+        if (!password) {
+            displayError('密码不能同时为空');
+            return;
+        }
+        if (!code) {
+            displayError('TOTP码不能为空');
+            return;
+        }
+
+        $.post(
+                '/user/login',
+                {
+                    'username': username,
+                    'password': md5(password),
+                    'totp': code
+                },
+                function (data) {
+                    if (data.code == 0) {
+                        window.location = "/dashboard"
+                    } else {
+                        displayError(data.msg)
+                    }
+                }
+        )
+    }
+</script>
+</body>
+</html>

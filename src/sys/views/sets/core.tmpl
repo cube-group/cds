@@ -1,0 +1,298 @@
+<div role="form">
+    <div class="container-fluid">
+        <div class="card mb-3">
+            <div class="card-header"><h3>FCDS核心设置</h3></div>
+        </div>
+        <!-- Example DataTables Card-->
+        <div class="card mb-3">
+            <div class="card-header">核心机SSH账户密码</div>
+            <div class="card-body">
+                <p>核心机包括:入口机、代理机、镜像编译机、镜像仓库机、生产机、任务机</p>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="SshUsername">ssh统一账号</label>
+                        <input type="text" class="form-control" id="SshUsername"
+                               value="{{.data.SshUsername}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="SshPassword">ssh统一密码</label>
+                        <input type="password" class="form-control" id="SshPassword"
+                               value="{{.data.SshPassword}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">主入口机配置</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="FacadeHost">Host绑定</label>
+                        <input type="text" class="form-control" id="FacadeHost" value="{{.data.FacadeHost}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="FacadeAddress">ssh连接</label>
+                        <input type="text" class="form-control" id="FacadeAddress" value="{{.data.FacadeAddress}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">编译机配置</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="BuilderAddress">编译机ssh连接</label>
+                        <input type="text" class="form-control" id="BuilderAddress"
+                               value="{{.data.BuilderAddress}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">镜像仓库统一账号密码</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryUsername">仓库统一账号</label>
+                        <input type="text" class="form-control" id="RegistryUsername"
+                               value="{{.data.RegistryUsername}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryPassword">仓库统一密码</label>
+                        <input type="password" class="form-control" id="RegistryPassword"
+                               value="{{.data.RegistryPassword}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">基础镜像仓库配置</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryBaseAddress">仓库ssh连接</label>
+                        <input type="text" class="form-control" id="RegistryBaseAddress"
+                               value="{{.data.RegistryBaseAddress}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryBaseDomain">仓库域名</label>
+                        <input type="text" class="form-control" id="RegistryBaseDomain"
+                               value="{{.data.RegistryBaseDomain}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryBaseHost">仓库hosts绑定</label>
+                        <input type="text" class="form-control" id="RegistryBaseHost"
+                               value="{{.data.RegistryBaseHost}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryBaseRunName">仓库docker运行名称</label>
+                        <input type="text" class="form-control" id="RegistryBaseRunName"
+                               value="{{.data.RegistryBaseRunName}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">微服务镜像仓库配置</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryServiceAddress">仓库ssh连接</label>
+                        <input type="text" class="form-control" id="RegistryServiceAddress"
+                               value="{{.data.RegistryServiceAddress}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryServiceDomain">仓库域名</label>
+                        <input type="text" class="form-control" id="RegistryServiceDomain"
+                               value="{{.data.RegistryServiceDomain}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryServiceHost">仓库hosts绑定</label>
+                        <input type="text" class="form-control" id="RegistryServiceHost"
+                               value="{{.data.RegistryServiceHost}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="RegistryServiceRunName">仓库docker运行名称</label>
+                        <input type="text" class="form-control" id="RegistryServiceRunName"
+                               value="{{.data.RegistryServiceRunName}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">Svn配置</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="SvnUsername">账号</label>
+                        <input type="text" class="form-control" id="SvnUsername" value="{{.data.SvnUsername}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="SvnPassword">密码</label>
+                        <input type="password" class="form-control" id="SvnPassword" value="{{.data.SvnPassword}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="SvnDomain">域名</label>
+                        <input type="text" class="form-control" id="SvnDomain" value="{{.data.SvnDomain}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="SvnHost">host绑定</label>
+                        <input type="text" class="form-control" id="SvnHost" value="{{.data.SvnHost}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">Git配置</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="GitUsername">账号</label>
+                        <input type="text" class="form-control" id="GitUsername" value="{{.data.GitUsername}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="GitPassword">密码</label>
+                        <input type="password" class="form-control" id="GitPassword" value="{{.data.GitPassword}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="GitDomain">域名</label>
+                        <input type="text" class="form-control" id="GitDomain" value="{{.data.GitDomain}}">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="GitHost">host绑定</label>
+                        <input type="text" class="form-control" id="GitHost" value="{{.data.GitHost}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">任务机相关</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="NodeTaskDefaultImages">任务机默认基础镜像(多个用逗号隔开)</label>
+                        <input type="text" class="form-control" id="NodeTaskDefaultImages"
+                               value="{{.data.NodeTaskDefaultImages}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">其它相关</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label class="control-label" for="DingDing">钉钉报警机器人</label>
+                        <input type="text" class="form-control" id="DingDing" value="{{.data.DingDing}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header">微服务模式</div>
+            <div class="card-body">
+                <div class="col-lg-6">
+                    <div role="form">
+                        <div class="form-group">
+                            <label for="AppMode">APP_MODE</label>
+                            <select id="AppMode" class="form-control">
+                                <option value="production">production</option>
+                                <option value="develop">develop</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="color: red">
+                            <span>
+                                （注意：APP_MODE用于微服务部署时标明容器所处环境）
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group text-center">
+            <button type="button" class="btn btn-primary" id="saveBtn">确认部署</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#AppMode').val("{{.data.AppMode}}");
+        $('#saveBtn').click(function (event) {
+            onSaveSets();
+        });
+    });
+
+    function onSaveSets() {
+        var list = [
+            "SshUsername",
+            "SshPassword",
+            "FacadeHost",
+            "FacadeAddress",
+            "BuilderAddress",
+            "RegistryUsername",
+            "RegistryPassword",
+            "RegistryBaseAddress",
+            "RegistryBaseDomain",
+            "RegistryBaseHost",
+            "RegistryBaseRunName",
+            "RegistryServiceAddress",
+            "RegistryServiceDomain",
+            "RegistryServiceHost",
+            "RegistryServiceRunName",
+            "AppMode",
+            "SvnUsername",
+            "SvnPassword",
+            "SvnDomain",
+            "SvnHost",
+            "GitUsername",
+            "GitPassword",
+            "GitDomain",
+            "GitHost",
+            "DingDing",
+            "NodeTaskDefaultImages"
+        ];
+
+        var data = {};
+        for (i = 0; i < list.length; i++) {
+            data[list[i]] = $("#" + list[i]).val();
+        }
+
+        console.log(data);
+        if (!confirm("确认进行核心配置数据修改么?")) {
+            return;
+        }
+        $("#saveBtn").attr("disabled", true);
+        $.post(
+                '/sets/core',
+                data,
+                function (data) {
+                    $("#saveBtn").attr("disabled", false);
+                    if (data.code == 0) {
+                        displayError(data.msg);
+                        window.location.reload();
+                    } else {
+                        if (data.msg) {
+                            displayError(data.msg)
+                        } else {
+                            displayError("未知错误")
+                        }
+                    }
+                }
+        )
+    }
+</script>

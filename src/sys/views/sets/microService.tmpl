@@ -1,0 +1,166 @@
+<div class="container-fluid">
+
+    <div class="card mb-3">
+        <div class="card-header">
+            微服务列表
+            <div class="float-right">
+                <button class="btn btn-success w-100" id="create">添加</button>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable no-footer" id="dataTable" width="100%"
+                                   cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th>服务ID</th>
+                                    <th>微服务名称</th>
+                                    <th>创建时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{range .data.list }}
+                                <tr data-id="{{.Id}}" data-name="{{.Name}}">
+                                    <td>{{.Id}}</td>
+                                    <td>{{.Name}}</td>
+                                    <td>{{.CreateTime.Format "2006-01-02 15:04:05"}}</td>
+                                    <td>
+                                        <button class="btn-danger delete">删除</button>
+                                    </td>
+                                </tr>
+                                {{end}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 分页开始 -->
+                    {{if .data.page}}
+                    <script>
+                        window.pageHref = "/sets/microService";
+                        window.pageSize = 20;
+                    </script>
+                    {{template "layout/page" .}}
+                    {{end}}
+                    <!-- 分页结束 -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- 添加（Modal） -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    微服务添加
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="createName">微服务名称</label>
+                        <input type="text" class="form-control" id="createName" placeholder="必须全网唯一">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="createConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 删除（Modal） -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="color: red">
+                    <span style="color: red">确定删除微服务</span><span id="deleteUserName"></span>吗？
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <input type="hidden" id="deleteId">
+                    <p>该操作会导致微服务的所有镜像版本和节点下线！</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="deleteTotp" placeholder="动态key">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="deleteConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script>
+
+    /************************************************ 分页 ************************************************/
+    $('#page-main').click(function () {
+        $('#page').val(1);
+        $('#search').submit();
+    });
+
+    $('#page-next').click(function () {
+        var next = parseInt("{{.data.page.Next}}");
+        if (next == 0) {
+            return true;
+        }
+        $('#page').val(next);
+        $('#search').submit();
+    });
+
+    $('#page-pre').click(function () {
+        var pre = parseInt("{{.data.page.Pre}}");
+        if (pre < 1) {
+            return true;
+        }
+        $('#page').val(pre);
+        $('#search').submit();
+    });
+
+    /************************************************ 添加 ************************************************/
+    $('#create').click(function () {
+        $('#createModal').modal({backdrop: 'static', keyboard: true})
+    });
+    $('#createConfirm').click(function () {
+        $.post('/sets/microCreate', getInputParams("create", ["name"]),
+            function (data) {
+                showMsgJump(data, "createModal");
+            }, 'json'
+        );
+    });
+    /************************************************ 删除 ************************************************/
+    $('.delete').click(function () {
+        var dataObj = $(this).parent().parent();
+        setInputValue("delete", dataObj, ["id"]);
+        $("#deleteUserName").html(dataObj.data("name"));
+        $('#deleteModal').modal({backdrop: 'static', keyboard: true})
+    });
+    $('#deleteConfirm').click(function () {
+        var params = getInputParams("delete", ["id", "totp"]);
+        $.post('/sets/microDel', params,
+            function (data) {
+                showMsgJump(data, "deleteModal");
+            },
+            'json'
+        );
+    });
+
+
+</script>

@@ -1,0 +1,125 @@
+<div class="container-fluid">
+    <div class="card mb-3">
+        <div class="card-header">
+            正在部署{{.data.Name}}，请谨慎操作：
+        </div>
+        <div class="card-body">
+            <div class="col-lg-6">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="msNodeNum">节点数量</label>
+                        <select id="msNodeNum" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="msVersion">版本选择</label>
+                        {{if .data}}
+                        <select id="msVersion" class="form-control">
+                            {{range .data.Versions}}
+                            <option>.</option>
+                            {{end}}
+                        </select>
+                        {{else}}
+                        <input type="text" class="form-control" value="无可用版本" disabled>
+                        {{end}}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="isGray">是否灰度</label>
+                        <select id="isGray" class="form-control">
+                            <option value="1">是</option>
+                            <option value="0">否</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="msInnerPort">所需端口</label>
+                        <input type="text" class="form-control" id="msInnerPort" placeholder="8080:80">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="msInnerVolume">所需挂载(强制为容器内/data)</label>
+                        <input type="text" class="form-control" id="msInnerVolume" value="/data" disabled>
+                    </div>
+
+
+                    <div class="form-group" style="color: red">
+                            <span>
+                                注意：<br>
+                                1、正式版本上线会将当前微服务所有版本节点替换为最新版本；<br>
+                                2、灰度版本上线不会影响当前微服务节点数，且会与正式版本共存;
+                            </span>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-primary" id="deployBtn">确认部署</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- 部署（Modal） -->
+<div class="modal fade" id="deployModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">
+                    是否确认进行服务镜像部署？
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div id="deployModalBody">
+                    <p>基础镜像：go:1.9.2</p>
+                    <p>微服务：ucenter:3.3.1</p>
+                </div>
+                <div id="deploying">
+                    <div class="text-center" style="background-color: deepskyblue">
+                        <span style="color: #ffffff">depoly ...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmBuildBtn">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+{{if .data}}
+<script>
+    $('#msNodeNum').attr('disabled', false);
+    $('#isGray').attr('disabled', false);
+    $('#msInnerPort').attr('disabled', false);
+    $('#deployBtn').attr('disabled', false);
+</script>
+{{else}}
+<script>
+    $('#msNodeNum').attr('disabled', true);
+    $('#isGray').attr('disabled', true);
+    $('#msInnerPort').attr('disabled', true);
+    $('#deployBtn').attr('disabled', true);
+    alert("无任何可用部署版本");
+</script>
+{{end}}
+
+<script>
+    $('#deployBtn').click(function () {
+        $('#deploying').hide();
+        $('#deployModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+
+
+    $('#confirmBuildBtn').click(function () {
+        $('#deployModalBody').hide();
+        $('#deploying').show()
+    })
+</script>
+
+

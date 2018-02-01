@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <div class="card mb-3">
+        <div class="card-header">
+            微服务部署: ucenter
+            <div class="float-right">
+                <a href="/deploy/create?id={{.data.id}}">
+                    <button class="btn btn-info w-100">部署</button>
+                </a>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <div id="dataTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th>部署id</th>
+                                <th>版本号</th>
+                                <th>部署状态</th>
+                                <th>部署耗时(单位：秒)</th>
+                                <th>类型</th>
+                                <th>开始时间</th>
+                                <th>完成时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            {{if .data.list}}
+                            {{range .data.list}}
+                            <tr>
+                                <td>.Id</td>
+                                <td>.Version</td>
+                                <td>.StatusMsg</td>
+                                <td>.UseTime</td>
+                                <td></td>
+                                <td>{{.CreateTime.Format "2006-01-02 15:04:05"}}</td>
+                                <td>{{.FinishTime.Format "2006-01-02 15:04:05"}}</td>
+                                <td>
+                                    <button class="btn-default">日志</button>
+                                    <button class="btn-success">下线</button>
+                                </td>
+                            </tr>
+                            {{end}}
+                            {{end}}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 分页开始 -->
+                {{if .data.page}}
+                <script>
+                    window.pageHref = "/detailList";
+                    window.pageSize = 20;
+                </script>
+                {{template "layout/page" .}}
+                {{end}}
+                <!-- 分页结束 -->
+            </div>
+        </div>
+    </div>
+</div>

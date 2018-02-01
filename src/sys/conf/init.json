@@ -1,0 +1,30 @@
+{
+  "app": "cds",
+  "version": "v0.0.1",
+  "locate": "Asia/Shanghai",
+  "debug": true,
+  "path": {
+    "static": "public",
+    "view": "views",
+    "log": "log"
+  },
+  "mysql": {
+    "maxOpen": 100,
+    "maxIdle": 20,
+    "driver": "mysql",
+    "master": "username:password@tcp(host:3306)/database?charset=utf8&parseTime=True&loc=Local"
+  },
+  "redis": {
+    "address": "host:ip",
+    "password": "password",
+    "db": 0
+  },
+  "ssh": {
+    "user": "root",
+    "address": "127.0.0.1:22",
+    "password": "password"
+  },
+  "session": {
+    "maxAge": 86400
+  }
+}

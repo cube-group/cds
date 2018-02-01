@@ -1,0 +1,297 @@
+<div class="container-fluid">
+
+    <div class="card mb-3">
+        <div class="card-header">
+            机群列表
+            <div class="float-right">
+                <button class="btn btn-success w-100" id="create">添加</button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                    <div class="row">
+                        <form id="search" class="row" action="?" method="get">
+                            <input type="hidden" id='page' name="page" value="{{.data.page.Index}}">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="dataTable_length">
+                                    <label>
+                                        每页
+                                        <select name="pageSize" aria-controls="dataTable"
+                                                class="form-control form-control-sm">
+                                            <option value="5" {{if eq .data.page.Size 5}} selected{{end}}>5</option>
+                                            <option value="10" {{if eq .data.page.Size 10}} selected{{end}}>10</option>
+                                            <option value="30" {{if eq .data.page.Size 30}} selected{{end}}>30</option>
+                                            <option value="100" {{if eq .data.page.Size 100}} selected{{end}}>100</option>
+                                        </select>
+                                        条
+                                    </label></div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div id="dataTable_filter" class="dataTables_filter">
+                                    <button class="btn btn-info" type="submit">查询<i class="icon-search icon-white"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable no-footer" id="dataTable" width="100%"
+                                   cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th>机群ID</th>
+                                    <th>微服务数量</th>
+                                    <th>机器类型</th>
+                                    <th>账户</th>
+                                    <th>ssh端口</th>
+                                    <th>密码</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{range .data.list }}
+                                <tr
+                                        data-id="{{.ID}}"
+                                        data-username="{{.Username}}"
+                                        data-type="{{.Type}}"
+                                        data-password="{{.Password}}"
+                                        data-port="{{.Port}}"
+                                        data-ip="{{.Ip}}"
+                                        data-microservicenum="{{.MicroServiceNum}}"
+                                >
+                                    <td>{{.Ip}}</td>
+                                    <td>{{.MicroServiceNum}}</td>
+                                    <td>{{.GetTypeCn}}</td>
+                                    <td>{{.Username}}</td>
+                                    <td>{{.Port}}</td>
+                                    <td>{{.Password}}</td>
+                                    <td>
+                                        <button class="btn-info update">编辑</button>
+                                        <button class="btn-danger delete">删除</button>
+                                    </td>
+                                </tr>
+                                {{end}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-5">
+                            <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">
+                                {{with .data.page}}
+                                页码:{{.Index}}/{{.Count}} , 总共{{.Total}}条
+                                {{end}}
+                                ,当前页{{.data.list | len }}条
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <div class="dataTables_paginate paging_simple_numbers">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" id="page-main">首页</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" id="page-pre">上一页</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" id="page-next">下一页</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 添加（Modal） -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">机器添加</h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="createIp">IP地址</label>
+                        <input type="text" class="form-control" id="createIp" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="createPort">ssh端口号</label>
+                        <input type="text" class="form-control" id="createPort" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="createUsername">ssh账号</label>
+                        <input type="text" class="form-control" id="createUsername" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="createPassword">ssh密码</label>
+                        <input type="text" class="form-control" id="createPassword" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="createType">机器类型</label>
+                        <select id="createType" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="1">生产</option>
+                            <option value="2">任务</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="createConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 编辑（Modal） -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">机器编辑</h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <input type="hidden" id="updateId">
+                    <div class="form-group">
+                        <label class="control-label" for="updateIp">IP地址</label>
+                        <input type="text" class="form-control" id="updateIp" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="updatePort">ssh端口号</label>
+                        <input type="text" class="form-control" id="updatePort" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="updateUsername">ssh账号</label>
+                        <input type="text" class="form-control" id="updateUsername" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="updatePassword">ssh密码</label>
+                        <input type="text" class="form-control" id="updatePassword" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="updateType">机器类型</label>
+                        <select id="updateType" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="1">生产</option>
+                            <option value="2">任务</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="updateConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 删除（Modal） -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <span style="color: red">确定删除机器</span><span id="deleteUserName"></span>吗？
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <p>该操作会移除该Node上的所有微服务镜像和容器！</p>
+                    <input type="hidden" id="deleteId">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="deleteTotp" placeholder="动态key">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="deleteConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script>
+    /************************************************ 分页 ************************************************/
+    $('#page-main').click(function () {
+        $('#page').val(1);
+        $('#search').submit();
+    });
+
+    $('#page-next').click(function () {
+        var next = parseInt("{{.data.page.Next}}");
+        if (next == 0) {
+            return true;
+        }
+        $('#page').val(next);
+        $('#search').submit();
+    });
+
+    $('#page-pre').click(function () {
+        var pre = parseInt("{{.data.page.Pre}}");
+        if (pre < 1) {
+            return true;
+        }
+        $('#page').val(pre);
+        $('#search').submit();
+    });
+
+    /************************************************ 添加 ************************************************/
+    $('#create').click(function () {
+        $('#createModal').modal({backdrop: 'static', keyboard: true})
+    });
+    $('#createConfirm').click(function () {
+        $.post('/sets/nodeCreate', getInputParams("create", ["username", "port", "microServiceNum", "type", 'password', 'ip']),
+            function (data) {
+                showMsgJump(data, "createModal");
+            }, 'json'
+        );
+    });
+
+    /************************************************ 更新 ************************************************/
+    $('.update').click(function () {
+        setInputValue("update", $(this).parent().parent(), ["id", "username", "port", "microServiceNum", "type", 'password', 'ip']);
+        $('#updateModal').modal({backdrop: 'static', keyboard: true})
+    });
+    $('#updateConfirm').click(function () {
+        $.post('/sets/nodeEdit', getInputParams("update", ["id", "username", "port", "microServiceNum", "type", 'password', 'ip']),
+            function (data) {
+                showMsgJump(data, "updateModal");
+            },
+            'json'
+        );
+    });
+
+    /************************************************ 删除 ************************************************/
+    $('.delete').click(function () {
+        var dataObj = $(this).parent().parent();
+        setInputValue("delete", dataObj, ["id"]);
+        $("#deleteUserName").html(dataObj.data("ip"));
+        $('#deleteModal').modal({backdrop: 'static', keyboard: true})
+    });
+    $('#deleteConfirm').click(function () {
+        var params = getInputParams("delete", ["id", "totp"]);
+        $.post('/sets/nodeDel', params,
+            function (data) {
+                showMsgJump(data, "deleteModal");
+            },
+            'json'
+        );
+    });
+
+
+</script>

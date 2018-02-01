@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c34da85-0d77-470f-9f7c-281f67f58557" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/asaskevich/govalidator" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/bitly/go-simplejson" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/boj/redistore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/boombuler/barcode" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/codegangsta/inject" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/fsnotify/fsnotify" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/go-martini/martini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/go-redis/redis" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/gorilla/context" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/gorilla/securecookie" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/gorilla/sessions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/hashicorp/hcl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/heroku/docker-registry-client" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/imroc/req" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/jinzhu/gorm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/jinzhu/inflection" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/magiconair/properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/martini-contrib/render" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/martini-contrib/sessions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/mitchellh/mapstructure" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/oxtoacart/bpool" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/pelletier/go-toml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/pquerna/otp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/renstrom/shortuuid" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/samuel/go-zookeeper" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/satori/go.uuid" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/afero" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/cast" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/jwalterweatherman" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/pflag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/github.com/spf13/viper" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/golang.org/x/crypto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/golang.org/x/net" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/golang.org/x/sys" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/golang.org/x/text" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gopkg.in/yaml.v2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/admin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/cqh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/java.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/muscle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/php.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/CDS.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/auth/basic.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/auth/basic_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/cli/cli.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/cli/cli_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/core/pool.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/errors/error.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/excel/excel.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/excel/excel_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/io/output.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/log/log.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/log/log_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/mail/mail.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/mail/mail_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/qrcode/qrcode.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/qrcode/qrcode_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/session/session.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/array.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/convert.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/convert_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/crypt.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/encoding.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/file.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/map.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/map_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/net.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/page_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/rich.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/rich_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/strings.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/strings_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/time.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/time_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/timer.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/timer_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/tool.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/tool_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/totp.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/totp_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/alex/utils/type.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/conf/init.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/build.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/codeJob.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/dashboard.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/deploy.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/sets.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/ssh.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/controllers/user.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/core/error.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/core/global.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-11-24.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-11-29.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-07.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-08.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-19.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-20.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-22.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-25.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-26.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-28.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2017-12-29.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-02.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-03.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-06.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-08.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-12.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-13.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-15.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-16.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-17.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-18.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/log/2018-01-19.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/main.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/build.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/func.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/info.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/jobCmd.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/jobSrc.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/jobTask.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/log.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/ms.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/node.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/node_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/registry.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/registry_test.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/sets.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/setsMs.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/setsProxy.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/setsServer.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/models/user.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/404.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/500.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/auth.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/log.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/plugins/set.go" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/.jsbeautifyrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/css/sb-admin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/css/sb-admin.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/sb-admin-charts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/sb-admin-datatables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/js/sb-admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/code-job-command.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/code-job-detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/code-job-registry.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/code-job.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-build-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-build.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-deploy-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-deploy-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/micro-service-deploy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-core.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-micro-service.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-nodes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-proxy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pages/sets-users.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/blank.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/cards.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/charts.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/forgot-password.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/css/core.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/css/custom.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/footer.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/js/core.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/js/custom.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/modals/logout.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/navbar.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/includes/scroll-to-top.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/index.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/login.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/navbar.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/register.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/pug/tables.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_cards.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_footer.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_global.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_login.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_utilities.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_colors.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_fixed.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_global.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_static.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/navbar/_navbar_toggle.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/scss/sb-admin.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap-grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap-grid.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap-reboot.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap-reboot.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/js/bootstrap.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/js/bootstrap.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/chart.js/Chart.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/chart.js/Chart.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/chart.js/Chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/chart.js/Chart.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/datatables/dataTables.bootstrap4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/datatables/dataTables.bootstrap4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/datatables/jquery.dataTables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/animated.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/bordered-pulled.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/core.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/fixed-width.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/font-awesome.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/icons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/larger.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/list.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/path.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/rotated-flipped.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/screen-reader.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/stacked.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/less/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_animated.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_core.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_fixed-width.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_larger.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_list.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_path.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_screen-reader.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_stacked.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/font-awesome/scss/font-awesome.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery-easing/jquery.easing.compatibility.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery-easing/jquery.easing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery-easing/jquery.easing.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/public/vendor/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/servers/registry-config.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/sql/create.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/build/create.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/build/index.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/codeJob/command.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/codeJob/detail.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/codeJob/index.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/codeJob/registry.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/dashboard/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/deploy/create.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/deploy/detail-list.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/deploy/index.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/error/error403.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/error/error404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/error/error500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/layout/footer.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/layout/main.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/layout/nav.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/layout/page.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/core.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/microService.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/nodes.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/proxy.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/sets/users.tmpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/user/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/user/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sys/views/user/register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
+    <ignored path="CDS.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="CDS" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CDS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="debugOptions">
+        <ErlangDebugOptions>
+          <option name="autoUpdateModulesNotToInterpret" value="true" />
+          <option name="modulesNotToInterpret">
+            <set />
+          </option>
+        </ErlangDebugOptions>
+      </option>
+      <option name="erlFlags" value="" />
+      <option name="moduleAndFunction" value="" />
+      <option name="params" value="" />
+      <option name="useTestCodePath" value="false" />
+      <option name="workDirectory" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="ErlangUnitRunConfigurationType" factoryName="Erlang Eunit" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="debugOptions">
+        <ErlangDebugOptions>
+          <option name="autoUpdateModulesNotToInterpret" value="true" />
+          <option name="modulesNotToInterpret">
+            <set />
+          </option>
+        </ErlangDebugOptions>
+      </option>
+      <option name="workDirectory" />
+      <module />
+      <option name="functionNames">
+        <set />
+      </option>
+      <option name="kind" value="MODULE" />
+      <option name="moduleNames">
+        <set />
+      </option>
+      <method />
+    </configuration>
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoRunFileConfiguration" factoryName="Go Single File">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="RebarEunitRunConfigurationType" factoryName="Erlang Rebar Eunit" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="command" value="eunit" />
+      <option name="skipDependencies" value="true" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c34da85-0d77-470f-9f7c-281f67f58557" name="Default" comment="" />
+      <created>1517487411420</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1517487411420</updated>
+      <workItem from="1517487413830" duration="358000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="358000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>

@@ -1,0 +1,390 @@
+<div class="container-fluid">
+    <!-- Example DataTables Card-->
+    <div class="card mb-3">
+        <div class="card-header">
+            任务机-{{.data.server.Ip}}
+
+            <div class="float-right">
+                <a href="/codeJob/command?id={{.data.server.ID}}"><button class="btn btn-info" id="command">命令管理</button></a>
+                <a href="/codeJob/registry?id={{.data.server.ID}}"><button class="btn btn-info" id="subversion">源码配置</button></a>
+                <button class="btn btn-danger" id="stop" data-id="{{.data.server.ID}}">停止所有任务</button>
+                <button class="btn btn-danger" id="restart" data-id="{{.data.server.ID}}">重启所有任务</button>
+                <button class="btn btn-info" id="create" data-id="{{.data.server.ID}}">添加任务</button>
+            </div>
+
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                 <div id="dataTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                    <div class="row">
+                        <form id="search" class="row" action="?" method="get">
+                            <input type="hidden" id='page' name="page" value="{{.data.page.Index}}">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="dataTable_length">
+                                    <label>
+                                        每页
+                                        <select name="pageSize" aria-controls="dataTable"
+                                                class="form-control form-control-sm">
+                                            <option value="5" {{if eq .data.page.Size 5}} selected{{end}}>5</option>
+                                            <option value="10" {{if eq .data.page.Size 10}} selected{{end}}>10</option>
+                                            <option value="30" {{if eq .data.page.Size 30}} selected{{end}}>30</option>
+                                            <option value="100" {{if eq .data.page.Size 100}} selected{{end}}>100</option>
+                                        </select>
+                                        条
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div id="dataTable_filter" class="dataTables_filter">
+                                    <button class="btn btn-info" type="submit">查询<i class="icon-search icon-white"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                    <div class="col-sm-12">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>任务id</th>
+                        <th>执行时间</th>
+                        <th>执行内容</th>
+                        <th>成功/失败</th>
+                        <th>最近错误</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{range .data.list }}
+                    <tr
+                                    data-id="{{.ID}}"
+                                    data-time="{{.Time}}"
+                                    data-tid="{{.Tid}}"
+                                    data-script="{{.Value}}"                                 
+>
+                        <td>{{.ID}}</td>
+                        <td>{{.Time}}</td>
+                        <td>{{.Value}}</td>
+                        <td>123456/2</td>
+                        <td>
+                            <button class="btn-info error">查看</button>
+                        </td>
+                        <td>
+                            <button class="btn-info update" >编辑</button>
+                            <button class="btn-danger delete">删除</button>
+                        </td>
+                    </tr>
+                    {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+                        <div class="col-sm-12 col-md-5">
+                            <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">
+                                {{with .data.page}}
+                                页码:{{.Index}}/{{.Count}} , 总共{{.Total}}条
+                                {{end}}
+                                ,当前页{{.data.list | len }}条
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <div class="dataTables_paginate paging_simple_numbers">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" id="page-main">首页</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" id="page-pre">上一页</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" id="page-next">下一页</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- 添加（Modal） -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">任务执行-添加</h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <input type="hidden" id="createServerId">
+                    <div class="form-group">
+                        <label class="control-label" for="createTime">任务时间</label>
+                        <input type="text" class="form-control" id="createTime" placeholder="" value="* * * * * *">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="createScript">任务脚本</label>
+                        <input type="text" class="form-control" id="createScript" placeholder="" value="php /opt/ucenter/bin/cli a/b/c">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="createRemark">相关备注</label>
+                        <input type="text" class="form-control" id="createRemark" placeholder="" value="php /opt/ucenter/bin/cli a/b/c">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="createWarning">是否报警</label>
+                        <input class="form-control" type="checkbox" id="createWarning">
+                    </div>
+                    <div class="form-group" style="color: red">
+                        <span>
+                            （注意：任务脚本支持shell或url）
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="createConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 更新（Modal） -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">任务执行-编辑</h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <input type="hidden" id="updateId">
+                    <div class="form-group">
+                        <label class="control-label" for="updateTime">任务时间</label>
+                        <input type="text" class="form-control" id="updateTime" placeholder="" value="* * * * * *">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="updateScript">任务脚本</label>
+                        <input type="text" class="form-control" id="updateScript" placeholder="" value="php /opt/ucenter/bin/cli a/b/c">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="updateRemark">相关备注</label>
+                        <input type="text" class="form-control" id="updateRemark" placeholder="" value="php /opt/ucenter/bin/cli a/b/c">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="updateWarning">是否报警</label>
+                        <input class="form-control" type="checkbox" id="updateWarning">
+                    </div>
+                    <div class="form-group" style="color: red">
+                        <span>
+                            （注意：任务脚本支持shell或url）
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="updateConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 删除（Modal） -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <span style="color: red">确定删除任务</span>123吗？
+                </h5>
+            </div>
+            <div class="modal-footer">
+                <form role="form">
+                    <input type="hidden" id="deleteId">
+                </form>
+                <button type="button" class="btn btn-primary" id="confirmDelete">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 重启（Modal） -->
+<div class="modal fade" id="restartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    确定重启所有任务吗？
+                </h5>
+            </div>
+            <div class="modal-footer">
+                <form role="form">
+                    <input type="hidden" id="restartServerId">
+                </form>
+                <button type="button" class="btn btn-primary" id="restartConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+
+<!-- 停止（Modal） -->
+<div class="modal fade" id="stopModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    确定停止所有任务吗？
+                </h5>
+            </div>
+            <div class="modal-footer">
+                <form role="form">
+                    <input type="hidden" id="stopServerId">
+                </form>
+                <button type="button" class="btn btn-primary" id="stopConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 最近错误（Modal） -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel" style="color: red">
+                    错误
+                </h5>
+            </div>
+            <div class="modal-body">
+                <pre>time="2015-02-10T15:26:08+08:00" level="info" msg="+job serveapi(unix:///var/run/docker.sock)"
+                    time="2015-02-10T15:26:08+08:00" level="info" msg="WARNING: You are running linux kernel version
+                    2.6.32-431.el6.x86_64, which might be unstable running docker. Please u
+                    pgrade your kernel to 3.8.0.
+                    time="2015-02-10T15:26:08+08:00" level="info" msg="Listening for HTTP on unix
+                    (/var/run/docker.sock)"
+                    /usr/bin/docker: relocation error: /usr/bin/docker: symbol dm_task_get_info_with_deferred_remove,
+                    version Base not defined in file libdevmapper.so.1.02 with link time r
+                    eference
+                </pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmBuildBtn" data-dismiss="modal">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script>
+/************************************************ 分页 ************************************************/
+    $('#page-main').click(function () {
+        $('#page').val(1);
+        $('#search').submit();
+    });
+
+    $('#page-next').click(function () {
+        var next = parseInt("{{.data.page.Next}}");
+        if (next == 0) {
+            return true;
+        }
+        $('#page').val(next);
+        $('#search').submit();
+    });
+
+    $('#page-pre').click(function () {
+        var pre = parseInt("{{.data.page.Pre}}");
+        if (pre < 1) {
+            return true;
+        }
+        $('#page').val(pre);
+        $('#search').submit();
+    });
+/******************************************** 添加 ****************************************************/
+    $('#create').click(function () {
+        $('#createServerId').val($(this).data('id'));
+        $('#createModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+
+    $('#createConfirm').click(function(){
+        $.post('/codeJob/jobtaskCreate', getInputParams("create", ["serverId", "time", "script", "remark", 'warning']),
+            function (data) {
+                showMsgJump(data, "createModal");
+            }, 'json'
+        );
+    })
+
+/*****************************************更新*********************************************************/
+    $('.update').click(function () {
+        setInputValue("update", $(this).parent().parent(), ["id", "time", "script", "remark", 'warning']);
+        $('#updateModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+    $('#updateConfirm').click(function(){
+        console.log(getInputParams("update", ["id", "time", "script", "remark", 'warning']));
+        $.post('/codeJob/jobtaskEdit', getInputParams("update", ["id", "time", "script", "remark", 'warning']),
+            function (data) {
+                showMsgJump(data, "createModal");
+            }, 'json'
+        );
+    })
+
+/*****************************************删除*********************************************************/
+    $('.delete').click(function () {
+        setInputValue("delete", $(this).parent().parent(), ["id"]);
+        $('#deleteModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+    $('#confirmDelete').click(function () {
+        $.post('/codeJob/jobtaskDel', getInputParams("delete", ["id"]),
+            function (data) {
+                showMsgJump(data, "deleteModal");
+            },
+            'json'
+        );
+    });
+/*****************************************重启任务********************************************************/
+    $('#restart').click(function () {
+        $('#serverId').val($(this).data('id'));
+        $('#restartModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+    $('#restartConfirm').click(function (){
+         $.post('/codeJob/jobtaskRestart', getInputParams("restart", ["serverid"]),
+            function (data) {
+                showMsgJump(data, "deleteModal");
+            },
+            'json'
+        );
+    });
+/*****************************************删除任务*********************************************************/
+    $('#stop').click(function () {
+        $('#serverId').val($(this).data('id'));
+        $('#stopModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+    $('#stopConfirm').click(function(){
+        $.post('/codeJob/jobtaskStop', getInputParams("stop", ["serverid"]),
+            function (data) {
+                showMsgJump(data, "deleteModal");
+            },
+            'json'
+        );
+    });
+    $('.error').click(function () {
+        $('#errorModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+  
+
+</script>

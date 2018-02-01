@@ -1,0 +1,153 @@
+<div class="container-fluid">
+
+    <div class="card mb-3">
+        <div class="card-header">
+            微服务镜像构建
+        </div>
+        <div class="card-body" id="container" disabled>
+            <div class="col-lg-6">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="baseImage">基础镜像选择</label>
+                        {{if .data.images}}
+                        <select id="baseImage" class="form-control">
+                            {{range .data.images}}
+                            <option value="{{.}}">{{.}}</option>
+                            {{end}}
+                        </select>
+                        {{else}}
+                        <input type="text" class="form-control" value="基础镜像列表获取失败:(" style="color: #FF0000" disabled>
+                        {{end}}
+                    </div>
+                    <div class="form-group">
+                        <label for="ms">微服务名称选择</label>
+                        {{if .data.ms}}
+                        <select id="ms" class="form-control">
+                            {{range .data.ms}}
+                            <option value="{{.Id}}">{{.Name}}</option>
+                            {{end}}
+                        </select>
+                        {{else}}
+                        <input type="text" class="form-control" value="微服务列表获取失败:(" style="color: #FF0000" disabled>
+                        {{end}}
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="msVersion">微服务版本号</label>
+                        <input type="text" class="form-control" id="msVersion">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="src">代码仓库</label>
+                        <input type="text" class="form-control" id="src">
+                    </div>
+
+                    <div class="form-group" style="color: red">
+                            <span>
+                                注意：<br>
+                                1、容器内项目代码目录/opt/ucenter<br>
+                                2、请务必实现/opt/ucenter/run.sh脚本，容器启动时会执行/bin/bash /opt/ucenter/run.sh
+                            </span>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-primary" id="buildBtn">确定构建</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- 编译（Modal） -->
+<div class="modal fade" id="buildModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">
+                    镜像构建
+                </h4>
+            </div>
+            <div class="modal-body">
+                <p>是否确认进行服务镜像构建？</p>
+                <div id="buildModalBody">
+                    <p>基础镜像：go:v1.9.2</p>
+                    <p>微服务：ucenter:v3.3.1</p>
+                </div>
+                <div id="building">
+                    <div class="text-center" style="background-color: deepskyblue">
+                        <span style="color: #ffffff">building ...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmBuildBtn">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+{{if and .data.images .data.ms}}
+<script>
+    $('#name').attr("disabled", false);
+    $('#version').attr("disabled", false);
+    $('#src').attr("disabled", false);
+    $('#buildBtn').attr("disabled", false);
+</script>
+{{else}}
+<script>
+    $('#name').attr("disabled", true);
+    $('#version').attr("disabled", true);
+    $('#src').attr("disabled", true);
+    $('#buildBtn').attr("disabled", true);
+</script>
+{{end}}
+
+<script>
+    var images = false;
+    $('#buildBtn').click(function () {
+        var data = {
+            "baseImage": $("#baseImage").val(),
+            "msId": $("#ms").val(),
+            "msName": $("#ms").find("option:selected").text(),
+            "msVersion": $("#msVersion").val(),
+            "src": $("#src").val()
+        };
+        for (var key in data) {
+            if (!data[key]) {
+                alert("参数" + key + "不能为空");
+                return;
+            }
+        }
+        $('#building').hide();
+        $("#buildModalBody").html("<p>基础镜像: " + data["baseImage"] + ":latest</p><p>微服务: " + data["msName"] + ":" + data["msVersion"] + "</p>");
+        $('#buildModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+
+
+    $('#confirmBuildBtn').click(function () {
+        $('#confirmBuildBtn').attr("disabled", true);
+        var data = {
+            "baseImage": $("#baseImage").val(),
+            "msId": $("#ms").val(),
+            "msName": $("#ms").find("option:selected").text(),
+            "msVersion": $("#msVersion").val(),
+            "src": $("#src").val()
+        };
+        $.post(
+                "/build/create",
+                data,
+                function (data) {
+                    $('#confirmBuildBtn').attr("disabled", false);
+                    if (data.code == 0) {
+                        window.location = "/build"
+                    } else {
+                        alert(data.msg ? data.msg : "异常错误");
+                    }
+                }
+        );
+    })
+</script>
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FCDS-核心设置</title>
+    <!-- Bootstrap core CSS-->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">FCDS</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="index.html">
+                    <span class="nav-link-text">首页</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="micro-service-build.html">
+                    <span class="nav-link-text">微服务构建</span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="micro-service-deploy.html">
+                    <span class="nav-link-text">微服务部署</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="code-job.html">
+                    <span class="nav-link-text">CodeJob</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                   data-parent="#exampleAccordion">
+                    <span class="nav-link-text">设置</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="sets-proxy.html">代理设置</a>
+                        <a href="sets-micro-service.html">微服务设置</a>
+                        <a href="sets-nodes.html">机群管理</a>
+                        <a href="sets-users.html">用户管理</a>
+                        <a href="sets-core.html">核心设置</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    Light weight!
+                    <i class="fa fa-fw fa-sign-out"></i>退出</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="content-wrapper">
+    <form role="form">
+        <div class="container-fluid">
+            <div class="card mb-3">
+                <div class="card-header"><h3>FCDS核心设置</h3></div>
+            </div>
+            <!-- Example DataTables Card-->
+            <div class="card mb-3">
+                <div class="card-header">Nginx主入口配置</div>
+                <div class="card-body">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label" for="outIp">外网IP地址</label>
+                            <input type="text" class="form-control" id="outIp">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="innerIp">内网IP地址</label>
+                            <input type="text" class="form-control" id="innerIp">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="sshPort">SSH端口</label>
+                            <input type="text" class="form-control" id="sshPort">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="sshUsername">SSH账号</label>
+                            <input type="text" class="form-control" id="sshUsername">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="sshPassword">SSH密码</label>
+                            <input type="text" class="form-control" id="sshPassword">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">基础镜像仓库配置</div>
+                <div class="card-body">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label" for="baseRegistry">基础镜像仓库</label>
+                            <input type="text" class="form-control" id="baseRegistry">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="baseRegistryInnerHost">内网hosts绑定</label>
+                            <input type="text" class="form-control" id="baseRegistryInnerHost">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="baseRegistryBak">基础镜像备份仓库</label>
+                            <input type="text" class="form-control" id="baseRegistryBak">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="baseRegistryBakInnerHost">内网hosts绑定</label>
+                            <input type="text" class="form-control" id="baseRegistryBakInnerHost">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card mb-3">
+                <div class="card-header">微服务仓库配置</div>
+                <div class="card-body">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="control-label" for="serviceRegistry">微服务仓库</label>
+                            <input type="text" class="form-control" id="serviceRegistry">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="serviceRegistryInnerHost">内网hosts绑定</label>
+                            <input type="text" class="form-control" id="serviceRegistryInnerHost">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="serviceRegistryBak">微服务备份仓库</label>
+                            <input type="text" class="form-control" id="serviceRegistryBak">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="serviceRegistryBakInnerHost">内网hosts绑定</label>
+                            <input type="text" class="form-control" id="serviceRegistryBakInnerHost">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card mb-3">
+                <div class="card-header">微服务模式</div>
+                <div class="card-body">
+                    <div class="col-lg-6">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="baseImage">APP_MODE</label>
+                                <select id="baseImage" class="form-control">
+                                    <option>production</option>
+                                    <option>develop</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="color: red">
+                            <span>
+                                （注意：APP_MODE用于微服务部署时标明容器所处环境）
+                            </span>
+                            </div>
+
+                            <div class="form-group text-center">
+                                <button type="button" class="btn btn-primary" id="deploydBtn">确认部署</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+        <div class="container">
+            <div class="text-center">
+                <small>Copyright © Your Website 2017</small>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">确定要退出吗?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Yeah buddy light weight baby!</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+                    <a class="btn btn-primary" href="login.html">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="../js/sb-admin-datatables.min.js"></script>
+</div>
+
+</body>
+</html>

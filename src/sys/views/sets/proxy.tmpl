@@ -1,0 +1,286 @@
+<div class="container-fluid">
+    <div class="card mb-3">
+        <div class="card-header">
+            代理设置
+            <div class="float-right">
+                <button class="btn btn-info w-100" id="create">创建</button>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                    <div class="row">
+                        <form id="search" class="row" action="?" method="get">
+                            <input type="hidden" id='page' name="page" value="{{.data.page.Index}}">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="dataTable_length">
+                                    <label>
+                                        每页
+                                        <select name="pageSize" aria-controls="dataTable"
+                                                class="form-control form-control-sm">
+                                            <option value="5" {{if eq .data.page.Size 5}} selected{{end}}>5</option>
+                                            <option value="10" {{if eq .data.page.Size 10}} selected{{end}}>10</option>
+                                            <option value="30" {{if eq .data.page.Size 30}} selected{{end}}>30</option>
+                                            <option value="100" {{if eq .data.page.Size 100}} selected{{end}}>100</option>
+                                        </select>
+                                        条
+                                    </label></div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div id="dataTable_filter" class="dataTables_filter">
+                                    <button class="btn btn-info" type="submit">查询<i class="icon-search icon-white"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable no-footer" id="dataTable" width="100%"
+                                   cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th>代理ID</th>
+                                    <th>代理类型</th>
+                                    <th>代理ip</th>
+                                    <th>代理端口号</th>
+                                    <th>状态</th>
+                                    <th>修改时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                {{range .data.list }}
+                                <tr
+                                        data-id="{{.ID}}"
+                                        data-type="{{.Type}}"
+                                        data-port="{{.Port}}"
+                                        data-ip="{{.Ip}}"
+                                >
+                                    <td>{{.ID}}</td>
+                                    <td>{{.GetTypeCn}}</td>
+                                    <td>{{.Ip}}</td>
+                                    <td>{{.Port}}</td>
+                                    <td>{{.GetStatusCn}}</td>
+                                    <td>{{.CreateTime.Format "2006-01-02 15:04:05"}}</td>
+                                    <td>
+                                        <button class="btn-info update">编辑</button>
+                                        <button class="btn-danger delete">删除</button>
+                                    </td>
+                                </tr>
+                                {{end}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-5">
+                            <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">
+                                {{with .data.page}}
+                                页码:{{.Index}}/{{.Count}} , 总共{{.Total}}条
+                                {{end}}
+                                ,当前页{{.data.list | len }}条
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <div class="dataTables_paginate paging_simple_numbers">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" id="page-main">首页</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" id="page-pre">上一页</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" id="page-next">下一页</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 添加（Modal） -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    代理服务器添加
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="createIp">IP地址</label>
+                        <input type="text" class="form-control" id="createIp">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="createPort">端口号</label>
+                        <input type="text" class="form-control" id="createPort" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="createType">类型</label>
+                        <select id="createType" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">Nginx</option>
+                            <option value="1">SpringCloud</option>
+                            <option value="2">GoKit</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="createConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 编辑（Modal） -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    代理服务器编辑
+                </h5>
+            </div>
+
+            <div class="modal-body">
+                <form role="form">
+                    <input type="hidden" id="updateId">
+                    <div class="form-group">
+                        <label class="control-label" for="updateIp">IP地址</label>
+                        <input type="text" class="form-control" id="updateIp">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="updatePort">端口号</label>
+                        <input type="text" class="form-control" id="updatePort" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="updateType">类型</label>
+                        <select id="updateType" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">Nginx</option>
+                            <option value="1">SpringCloud</option>
+                            <option value="2">GoKit</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="updateConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 删除（Modal） -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="color: red">
+                    <span style="color: red">确定删除代理</span><span id="deleteUserName"></span>吗？
+                </h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <input type="hidden" id="deleteId">
+                    <p>该操作会导致代理的所有镜像版本和节点下线！</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="deleteTotp" placeholder="动态key">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="deleteConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script>
+
+    /************************************************ 分页 ************************************************/
+    $('#page-main').click(function () {
+        $('#page').val(1);
+        $('#search').submit();
+    });
+
+    $('#page-next').click(function () {
+        var next = parseInt("{{.data.page.Next}}");
+        if (next == 0) {
+            return true;
+        }
+        $('#page').val(next);
+        $('#search').submit();
+    });
+
+    $('#page-pre').click(function () {
+        var pre = parseInt("{{.data.page.Pre}}");
+        if (pre < 1) {
+            return true;
+        }
+        $('#page').val(pre);
+        $('#search').submit();
+    });
+
+    /************************************************ 添加 ************************************************/
+    $('#create').click(function () {
+        $('#createModal').modal({backdrop: 'static', keyboard: true})
+    });
+    $('#createConfirm').click(function () {
+        $.post('/sets/proxyCreate', getInputParams("create", ["port", "type", 'password', 'ip']),
+            function (data) {
+                showMsgJump(data, "createModal");
+            }, 'json'
+        );
+    });
+
+    /************************************************ 更新 ************************************************/
+    $('.update').click(function () {
+        setInputValue("update", $(this).parent().parent(), ["id", "port", "type", 'password', 'ip']);
+        $('#updateModal').modal({backdrop: 'static', keyboard: true})
+    });
+    $('#updateConfirm').click(function () {
+        $.post('/sets/proxyEdit', getInputParams("update", ["id", "port", "type", 'password', 'ip']),
+            function (data) {
+                showMsgJump(data, "updateModal");
+            },
+            'json'
+        );
+    });
+
+    /************************************************ 删除 ************************************************/
+    $('.delete').click(function () {
+        var dataObj = $(this).parent().parent();
+        setInputValue("delete", dataObj, ["id"]);
+        $("#deleteUserName").html(dataObj.data("ip") + ":" + dataObj.data("port"));
+        $('#deleteModal').modal({backdrop: 'static', keyboard: true})
+    });
+    $('#deleteConfirm').click(function () {
+        var params = getInputParams("delete", ["id", "totp"]);
+        $.post('/sets/proxyDel', params,
+            function (data) {
+                showMsgJump(data, "deleteModal");
+            },
+            'json'
+        );
+    });
+
+
+</script>

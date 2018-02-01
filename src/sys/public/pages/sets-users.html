@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FCDS-用户管理</title>
+    <!-- Bootstrap core CSS-->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">FCDS</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="index.html">
+                    <span class="nav-link-text">首页</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="micro-service-build.html">
+                    <span class="nav-link-text">微服务构建</span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="micro-service-deploy.html">
+                    <span class="nav-link-text">微服务部署</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="code-job.html">
+                    <span class="nav-link-text">CodeJob</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                   data-parent="#exampleAccordion">
+                    <span class="nav-link-text">设置</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="sets-proxy.html">代理设置</a>
+                        <a href="sets-micro-service.html">微服务设置</a>
+                        <a href="sets-nodes.html">机群管理</a>
+                        <a href="sets-users.html">用户管理</a>
+                        <a href="sets-core.html">核心设置</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    Light weight!
+                    <i class="fa fa-fw fa-sign-out"></i>退出</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Example DataTables Card-->
+        <div class="card mb-3">
+            <div class="card-header">
+                用户列表
+                <div class="float-right">
+                    <button class="btn btn-success w-100" id="create">添加</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>用户名称</th>
+                            <th>用户类型</th>
+                            <th>最近登录</th>
+                            <th>创建时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>linyang</td>
+                            <td>管理员</td>
+                            <td>2017-10-22 16:38:00</td>
+                            <td>2017-10-22 16:38:00</td>
+                            <td>
+                                <button class="btn-info totop">totp</button>
+                                <button class="btn-info update">修改信息</button>
+                                <button class="btn-danger delete">删除用户</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+        <div class="container">
+            <div class="text-center">
+                <small>Copyright © Your Website 2017</small>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">确定要退出吗?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Yeah buddy light weight baby!</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+                    <a class="btn btn-primary" href="login.html">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="../js/sb-admin-datatables.min.js"></script>
+</div>
+</body>
+
+<!-- 添加（Modal） -->
+<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">用户添加</h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="createUsername">用户名</label>
+                        <input type="text" class="form-control" id="createUsername" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="createPassword">用户密码</label>
+                        <input type="text" class="form-control" id="createPassword" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="createType">用户类型</label>
+                        <select id="createType" class="form-control">
+                            <option>普通用户</option>
+                            <option>系统管理员</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="createConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 编辑（Modal） -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">用户修改</h5>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="updateUsername">用户名</label>
+                        <input type="text" class="form-control" id="updateUsername" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="updatePassword">用户密码</label>
+                        <input type="text" class="form-control" id="updatePassword" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="updateType">用户类型</label>
+                        <select id="updateType" class="form-control">
+                            <option>普通用户</option>
+                            <option>系统管理员</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="updateConfirm">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<!-- 删除（Modal） -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <span style="color: red">确定删除用户</span>linyang吗？
+                </h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmDelete">确认</button>
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script>
+    $('#create').click(function () {
+        $('#createModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+
+    $('.update').click(function () {
+        $('#updateModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+    $('.delete').click(function () {
+        $('#deleteModal').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+
+</script>
+
+</html>

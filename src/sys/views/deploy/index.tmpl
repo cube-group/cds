@@ -1,0 +1,106 @@
+<div class="container-fluid">
+
+    <div class="card mb-3">
+        <div class="card-header">
+            微服务列表
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th width="20%">微服务名称</th>
+                                    <th width="20%">正式版本</th>
+                                    <th width="45%">灰度版本</th>
+                                    <th width="20%">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{if .data.list}}
+                                {{range .data.list}}
+                                <tr>
+                                    <td>{{.Id}}. {{.Name}}</td>
+                                    <td>
+                                        {{if .OfficalExist}}
+                                        <label class="btn-success">最新{{.Offical.Name}}:{{.Offical.Version}}</label>
+                                        {{else}}
+                                        <label class="btn-success">暂无正式版本</label>
+                                        {{end}}
+                                    </td>
+                                    <td>
+                                        {{if .GrayExist}}
+                                        {{range .Gray}}
+                                        <label class="btn-default">{{.Name}}:{{.Version}}</label>
+                                        {{end}}
+                                        {{else}}
+                                        <label class="btn-default">暂无灰度版本</label>
+                                        {{end}}
+                                    </td>
+                                    <td>
+                                        <a href="/deploy/detailList?id={{.Id}}">
+                                            <button class="btn-info">部署</button>
+                                        </a>
+                                    </td>
+                                </tr>
+                                {{end}}
+                                {{end}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 分页开始 -->
+                    {{if .data.page}}
+                    <script>
+                        window.pageHref = "/deploy";
+                        window.pageSize = 20;
+                    </script>
+                    {{template "layout/page" .}}
+                    {{end}}
+                    <!-- 分页结束 -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 构建历史（Modal） -->
+<div class="modal fade" id="buildHistory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel" style="color: red">
+                    微服务ucenter:v3.3.1构建失败
+                </h5>
+            </div>
+            <div class="modal-body">
+                <pre>time="2015-02-10T15:26:08+08:00" level="info" msg="+job serveapi(unix:///var/run/docker.sock)"
+                    time="2015-02-10T15:26:08+08:00" level="info" msg="WARNING: You are running linux kernel version
+                    2.6.32-431.el6.x86_64, which might be unstable running docker. Please u
+                    pgrade your kernel to 3.8.0.
+                    time="2015-02-10T15:26:08+08:00" level="info" msg="Listening for HTTP on unix
+                    (/var/run/docker.sock)"
+                    /usr/bin/docker: relocation error: /usr/bin/docker: symbol dm_task_get_info_with_deferred_remove,
+                    version Base not defined in file libdevmapper.so.1.02 with link time r
+                    eference
+                </pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmBuildBtn" data-dismiss="modal">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script>
+    $('.buildError').click(function () {
+        $('#buildHistory').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+
+</script>

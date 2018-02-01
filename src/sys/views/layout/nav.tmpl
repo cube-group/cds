@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">FCDS</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="/dashboard">
+                    <span class="nav-link-text">首页</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="/build">
+                    <span class="nav-link-text">微服务构建</span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="/deploy">
+                    <span class="nav-link-text">微服务部署</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="/codeJob">
+                    <span class="nav-link-text">CodeJob</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                   data-parent="#exampleAccordion">
+                    <span class="nav-link-text">设置</span>
+                </a>
+                <ul class="sidenav-second-level" id="collapseExamplePages">
+                    <li>
+                        <a href="/sets/proxy">代理设置</a>
+                        <a href="/sets/microService">微服务设置</a>
+                        <a href="/sets/nodes">机群管理</a>
+                        <a href="/sets/users">用户管理</a>
+                        <a href="/sets/core">核心设置</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    Light weight!
+                    <i class="fa fa-fw fa-sign-out"></i>退出</a>
+            </li>
+        </ul>
+    </div>
+</nav>

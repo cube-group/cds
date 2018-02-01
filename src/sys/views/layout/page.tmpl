@@ -1,0 +1,59 @@
+<!-- 系统统一分页模板 -->
+<div class="row">
+    <div class="col-sm-12 col-md-5">
+        <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">
+            页码:{{.data.page.Index}}/{{.data.page.Count}} , 总共{{.data.page.Total}}条{{.data.a}}
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-7">
+        <div class="dataTables_paginate paging_simple_numbers">
+            <ul class="pagination">
+                <li class="page-item">
+                    <button onclick="hrefFirst()" class="btn" id="page-main">首页</button>
+                </li>
+                <li class="page-item">
+                    <button onclick="hrefPre()" class="btn" id="page-pre">上一页</button>
+                </li>
+                <li class="page-item">
+                    <button onclick="hrefNext()" class="btn" id="page-next">下一页</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    {{if .data.page.Enabled}}
+    <script>
+        $(function(){
+            $("#page-main").attr("disabled", true);
+            $("#page-pre").attr("disabled", true);
+            $("#page-next").attr("disabled", true);
+        });
+    </script>
+    {{end}}
+
+    {{if not .data.page.Pre}}
+    <script>
+        $("#page-pre").attr("disabled", true);
+    </script>
+    {{end}}
+
+    {{if not .data.page.Next}}
+    <script>
+        $("#page-next").attr("disabled", true);
+    </script>
+    {{end}}
+
+    <script>
+        function hrefFirst() {
+            window.location.href = window.pageHref + "?page=1&pageSize=" + window.pageSize;
+        }
+
+        function hrefPre() {
+            window.location.href = window.pageHref + "?page={{.data.page.Pre}}&pageSize=" + window.pageSize;
+        }
+
+        function hrefNext() {
+            window.location.href = window.pageHref + "?page={{.data.page.Next}}&pageSize=" + window.pageSize;
+        }
+    </script>
+</div>

@@ -1,0 +1,134 @@
+<div class="container-fluid">
+    <!-- Example DataTables Card-->
+    <div class="card mb-3">
+        <div class="card-header">
+            微服务镜像构建历史
+            <div class="float-right">
+                <a href="/build/create">
+                    <button class="btn btn-info w-100">开始构建</button>
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered dataTable no-footer" id="dataTable" width="100%"
+                                   cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                <thead>
+                                <tr>
+                                    <th>构建id</th>
+                                    <th>微服务名称版本</th>
+                                    <th>状态</th>
+                                    <th>微服务唯一ID</th>
+                                    <th>操作人</th>
+                                    <th>时间</th>
+                                    <th>日志</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{range .data.list }}
+                                <tr>
+                                    <td>{{.Id}}</td>
+                                    <td>{{.Name}}:{{.Version}}</td>
+                                    <td>{{.StatusMsg}}</td>
+                                    <td>{{.UniqueId}}</td>
+                                    <td>{{.Username}}</td>
+                                    <td>{{.CreateTime.Format "2006-01-02 15:04:05"}}</td>
+                                    {{if eq .Status 1}}
+                                    <td><label class="col-form-label">暂无</label></td>
+                                    {{else}}
+                                    <td>
+                                        <button class="btn-info"
+                                                onclick="onViewLog('{{.Name}}:{{.Version}}','{{.Log}}')">查看
+                                        </button>
+                                    </td>
+                                    {{end}}
+                                </tr>
+                                {{end}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 分页开始 -->
+                    {{if .data.page}}
+                    <script>
+                        window.pageHref = "/build";
+                        window.pageSize = 20;
+                    </script>
+                    {{template "layout/page" .}}
+                    {{end}}
+                    <!-- 分页结束 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 构建历史（Modal） -->
+<div class="modal fade" id="buildHistory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel" style="color: red">
+                    msName:msVersion构建失败
+                </h5>
+            </div>
+            <div class="modal-body">
+                <pre>time="2015-02-10T15:26:08+08:00" level="info" msg="+job serveapi(unix:///var/run/docker.sock)"
+                    time="2015-02-10T15:26:08+08:00" level="info" msg="WARNING: You are running linux kernel version
+                    2.6.32-431.el6.x86_64, which might be unstable running docker. Please u
+                    pgrade your kernel to 3.8.0.
+                    time="2015-02-10T15:26:08+08:00" level="info" msg="Listening for HTTP on unix
+                    (/var/run/docker.sock)"
+                    /usr/bin/docker: relocation error: /usr/bin/docker: symbol dm_task_get_info_with_deferred_remove,
+                    version Base not defined in file libdevmapper.so.1.02 with link time r
+                    eference
+                </pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmBuildBtn" data-dismiss="modal">确认
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 构建历史（Modal） -->
+<div class="modal fade" id="viewLogModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewLogModalLabel" style="color: red">
+                    日志
+                </h5>
+            </div>
+            <div class="modal-body">
+                <textarea id="viewLogBody" style="width: 100%;height:500px;" disabled>
+                </textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script>
+    $('.buildError').click(function () {
+        $('#buildHistory').modal({backdrop: 'static', keyboard: true}).css({})
+        //TODO 取接口
+    });
+
+    //查看日志
+    function onViewLog(ms, log) {
+        $('#viewLogModal').modal({backdrop: 'static', keyboard: true}).css({});
+        $('#viewLogModalLabel').text(ms + " 构建日志");
+        $('#viewLogBody').text(log)
+    }
+</script>

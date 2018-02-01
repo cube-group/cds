@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>FCDS-微服务部署</title>
+    <!-- Bootstrap core CSS-->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">FCDS</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="index.html">
+                    <span class="nav-link-text">首页</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="micro-service-build.html">
+                    <span class="nav-link-text">微服务构建</span>
+                </a>
+            </li>
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="micro-service-deploy.html">
+                    <span class="nav-link-text">微服务部署</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="code-job.html">
+                    <span class="nav-link-text">CodeJob</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+                    <span class="nav-link-text">设置</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="sets-proxy.html">代理设置</a>
+                        <a href="sets-micro-service.html">微服务设置</a>
+                        <a href="sets-nodes.html">机群管理</a>
+                        <a href="sets-users.html">用户管理</a>
+                        <a href="sets-core.html">核心设置</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav sidenav-toggler">
+            <li class="nav-item">
+                <a class="nav-link text-center" id="sidenavToggler">
+                    <i class="fa fa-fw fa-angle-left"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    Light weight!
+                    <i class="fa fa-fw fa-sign-out"></i>退出</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Example DataTables Card-->
+        <div class="card mb-3">
+            <div class="card-header">
+                微服务列表
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>微服务名称</th>
+                            <th>版本</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1.ucenter</td>
+                            <td>
+                                <button class="btn-default">最新v3.5.1</button>
+                                <button class="btn-default">最新v3.4.1</button>
+                                <button class="btn-success">在线v3.3.1</button>
+                            </td>
+                            <td>
+                                <a href="micro-service-deploy-1.html"><button class="btn-info">部署</button></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.order</td>
+                            <td>
+                                <button class="btn-default">最新v3.3.1</button>
+                                <button class="btn-success">在线v3.3.1</button>
+                            </td>
+                            <td>
+                                <a href="micro-service-deploy-1.html"><button class="btn-info">部署</button></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3.driver</td>
+                            <td>
+                                <button class="btn-default">最新v3.3.1</button>
+                                <button class="btn-success">在线v3.3.1</button>
+                            </td>
+                            <td>
+                                <a href="micro-service-deploy-1.html"><button class="btn-info">部署</button></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4.customer</td>
+                            <td>
+                                <button class="btn-default">最新v3.3.1</button>
+                                <button class="btn-success">在线v3.3.1</button>
+                            </td>
+                            <td>
+                                <a href="micro-service-deploy-1.html"><button class="btn-info">部署</button></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+        <div class="container">
+            <div class="text-center">
+                <small>Copyright © Your Website 2017</small>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">确定要退出吗?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Yeah buddy light weight baby!</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+                    <a class="btn btn-primary" href="login.html">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="../vendor/datatables/jquery.dataTables.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="../js/sb-admin-datatables.min.js"></script>
+</div>
+</body>
+
+<!-- 构建历史（Modal） -->
+<div class="modal fade" id="buildHistory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel" style="color: red">
+                    微服务ucenter:v3.3.1构建失败
+                </h5>
+            </div>
+            <div class="modal-body">
+                <pre>time="2015-02-10T15:26:08+08:00" level="info" msg="+job serveapi(unix:///var/run/docker.sock)"
+                    time="2015-02-10T15:26:08+08:00" level="info" msg="WARNING: You are running linux kernel version
+                    2.6.32-431.el6.x86_64, which might be unstable running docker. Please u
+                    pgrade your kernel to 3.8.0.
+                    time="2015-02-10T15:26:08+08:00" level="info" msg="Listening for HTTP on unix
+                    (/var/run/docker.sock)"
+                    /usr/bin/docker: relocation error: /usr/bin/docker: symbol dm_task_get_info_with_deferred_remove,
+                    version Base not defined in file libdevmapper.so.1.02 with link time r
+                    eference
+                </pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="confirmBuildBtn" data-dismiss="modal">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script>
+    $('.buildError').click(function () {
+        $('#buildHistory').modal({backdrop: 'static', keyboard: true}).css({})
+    });
+
+</script>
+
+</
+html >
